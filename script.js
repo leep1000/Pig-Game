@@ -40,6 +40,7 @@ const reset = function () {
   player0CurrentScore.textContent = 0;
   player1CurrentScore.textContent = 0;
 
+  // add the 'hidden' class to ensure dice image does not appear at the start of the game
   diceImage.classList.add('hidden');
 
   player0Element.classList.add('player--active');
