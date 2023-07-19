@@ -29,7 +29,7 @@ let playing = true;
 // Function to reset variables back to the start
 const reset = function () {
   scores[0] = 0;
-  scores[0] = 0;
+  scores[1] = 0;
   currentScore = 0;
   currentPlayer = 0;
   playing = true;
@@ -37,8 +37,8 @@ const reset = function () {
   score0El.textContent = 0;
   score1El.textContent = 0;
 
-  current0El.textContent = 0;
-  current1El.textContent = 0;
+  player0CurrentScore.textContent = 0;
+  player1CurrentScore.textContent = 0;
 
   diceImage.classList.add('hidden');
 
@@ -98,7 +98,7 @@ btnHold.addEventListener('click', function () {
     scores[currentPlayer];
 
   // 2. Check if score is >= 100
-  if (scores[currentPlayer] >= 25) {
+  if (scores[currentPlayer] >= 100) {
     // Finish the game
     playing = false;
     document
